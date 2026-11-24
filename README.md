@@ -27,7 +27,7 @@ by the API and the web app.
   concurrent creates and expects `WEB-1…WEB-15` with no gaps or duplicates.
 - **Security basics done right.** scrypt password hashing with a
   self-describing format, constant-time comparison and equal timing for
-  unknown emails; short-lived JWTs with issuer/audience checks; Helmet headers;
+  unknown emails; expiring JWTs (12 h default, configurable) with issuer/audience checks; Helmet headers;
   rate-limited auth routes; authorization headers redacted from logs.
 - **Audit log in the same transaction** as each change, recording who did what
   and a field-level diff.
@@ -148,6 +148,17 @@ docs/adr        architecture decision records
 - Email invitations for people without an account
 - Refresh tokens in httpOnly cookies via a Next.js BFF route
 - Drag-and-drop board and real-time updates over WebSockets
+
+## Documentation
+
+| Document | Contents |
+|---|---|
+| [Product](docs/product.md) | Vision, business problem, business and technical requirements, workflows |
+| [Engineering](docs/engineering.md) | Boundaries, security, performance, observability, DR, DevOps, testing |
+| [Roadmap](docs/roadmap.md) | Ten milestones and the release plan |
+| [CTO review checklist](docs/cto-review-checklist.md) | Honest status against production-readiness criteria |
+| [ADRs](docs/adr) | Architecture decisions |
+| [Contributing](CONTRIBUTING.md) | Branching, commits, labels, board, releases |
 
 ## License
 
